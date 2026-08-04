@@ -1,0 +1,4 @@
+google-genai
+tabulate
+rich
+python-dotenv

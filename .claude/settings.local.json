@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import sys; print\\(sys.executable\\)\")",
+      "Bash(python -c \"import anthropic; print\\('anthropic OK'\\)\")",
+      "Bash(python -c \"import google.generativeai; print\\('genai OK'\\)\")",
+      "Bash(python -c \"import ast,sys; t=ast.parse\\(open\\('jungle_book_narrator.py'\\).read\\(\\)\\); print\\('syntax OK'\\)\")",
+      "Bash(python -m unittest test_narrator -v)",
+      "Bash(python -c \"import jungle_book_narrator; print\\('import OK, MODEL=', jungle_book_narrator.MODEL\\)\")",
+      "Bash(python -m unittest test_narrator)"
+    ]
+  }
+}
