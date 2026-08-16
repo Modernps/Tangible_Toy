@@ -51,6 +51,7 @@ export default function StoryScreen({ story, backendUrl, onBack }: Props) {
         return;
       }
       setCurrentIndex(index);
+      indexRef.current = index;
       const segment = segments[index];
 
       if (segment.sound_effect) {
@@ -89,6 +90,7 @@ export default function StoryScreen({ story, backendUrl, onBack }: Props) {
       setIsPlaying(false);
       return;
     }
+    playingRef.current = true;
     setIsPlaying(true);
     if (currentIndex === -1) {
       playSegmentAt(0);
